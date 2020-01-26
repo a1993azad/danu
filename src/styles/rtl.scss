@@ -1,0 +1,102 @@
+@import "config";
+
+@font-face {
+  font-family: $iran-sans;
+  src: url('../fonts/IRANSansWeb.eot'),
+  url('../fonts/IRANSansWeb.woff') format('woff'),
+  url('../fonts/IRANSansWeb.ttf') format("truetype");
+}
+@font-face {
+  font-family: $iran-sans_Bold;
+  src: url('../fonts/IRANSansWeb_Bold.eot?#') format("eot"),
+  url('../fonts/IRANSansWeb_Bold.woff') format("woff"),
+  url('../fonts/IRANSansWeb_Bold.ttf') format("truetype");
+}
+@font-face {
+  font-family: $lalezar;
+  src: url('../fonts/Lalezar.eot'),
+  url('../fonts/Lalezar.woff') format('woff'),
+  url('../fonts/Lalezar.ttf') format('truetype');
+}
+
+*{
+  direction: rtl;
+  font-family: $iran-sans;
+}
+.ltr{
+  direction: ltr;
+}
+.iranSans{
+  font-family: $iran-sans;
+}
+.iranSansBold{
+  font-family: $iran-sans_Bold;
+}
+.lalezar{
+  font-family: $lalezar;
+}
+.sidebar{
+  right: 0;
+}
+.sidebar-menu {
+  text-align: right;
+}
+.theme-config .theme-config__trigger{
+  top:95%;
+}
+.theme-config{
+  bottom: 0;
+  top:auto;
+  @include transform(translateX(100%) translateY(0%));
+  &.theme-config--active{
+    @include transform(translateY(0%));
+  }
+}
+.btn-profile.sidebar__link{
+  width: 190px;
+  text-align: right;
+}
+.dropdown-menu,.dropdown-menu-right{
+  left: 0 !important;
+  right: auto !important;
+}
+.input-group > .input-group-prepend > .btn, .input-group > .input-group-prepend > .input-group-text, .input-group > .input-group-append:not(:last-child) > .btn, .input-group > .input-group-append:not(:last-child) > .input-group-text, .input-group > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle), .input-group > .input-group-append:last-child > .input-group-text:not(:last-child) {
+  border-top-right-radius: 50em;
+  border-bottom-right-radius: 50em;
+}
+.input-group .form-control:last-child, .input-group-addon:last-child, .input-group-btn:last-child > .btn, .input-group-btn:last-child > .btn-group > .btn, .input-group-btn:last-child > .dropdown-toggle, .input-group-btn:first-child > .btn:not(:first-child), .input-group-btn:first-child > .btn-group:not(:first-child) > .btn {
+  border-bottom-left-radius: 50em;
+  border-top-left-radius: 50em;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+@media (min-width: 992px){
+  .sidebar--collapsed .sidebar-menu--slim .sidebar-menu__entry--nested > .sidebar-submenu {
+    right: calc(100% - 3px);
+
+    left: auto;
+  }
+}
+.modal-header .close {
+  margin: -1rem auto -1rem -1rem;
+}
+.timeline.timeline-datetime .timeline-item {
+  margin-right: 117px;
+  margin-left: 0;
+}
+.timeline .timeline-item .timeline-icon:before {
+  left: auto;
+  right: -12px;
+}
+.timeline .timeline-item .timeline-icon i {
+  left: auto;
+  right: -19px;
+}
+.timeline .timeline-item .timeline-item-time {
+  left: calc(100% + 40px);
+  right: auto;
+}
+.nav-pills > li + li {
+  margin-left: 2px;
+  margin-right: 2px;
+}

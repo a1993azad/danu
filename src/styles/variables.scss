@@ -1,0 +1,17 @@
+@import "~@owczar/dashboard-style--airframe/scss/variables";
+
+$primary: #070735 !default ;
+$t: () !default;
+$t:map_merge((
+"primary":#070735
+),$t);
+$dashboard-colors:map_remove($dashboard-colors,"primary");
+$dashboard-colors: map-merge($t,$dashboard-colors);
+:root {
+  --blue: $primary;
+  --primary:$primary;
+}
+//set-nth($dashboard-colors,$i, $primary)
+
+
+
